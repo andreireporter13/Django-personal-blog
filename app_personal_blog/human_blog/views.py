@@ -14,5 +14,9 @@ class AboutPageView(TemplateView):
     template_name = 'human_blog/about.html'
 
 
+class CVResumePageView(TemplateView):
+    template_name = 'human_blog/resume.html'
+
+
 # View for blog_post
 # And for get in touch ---> Make a contact page!
