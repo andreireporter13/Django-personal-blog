@@ -57,10 +57,10 @@
 		<a class="nav-link" href="{% url 'home' %}"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
 	    </li>
 	    <li class="nav-item {% if request.resolver_match.url_name == 'interviuri' %}active{% endif %}">
-		<a class="nav-link" href=""><i class="fas fa-microphone fa-fw mr-2"></i>Interviuri</a>
+		<a class="nav-link" href="{% url 'interviuri' %}"><i class="fas fa-microphone fa-fw mr-2"></i>Interviuri</a>
 	    </li> 
-	    <li class="nav-item {% if request.resolver_match.url_name == 'blog_post' %}active{% endif %}">
-		<a class="nav-link" href=""><i class="fas fa-robot fa-fw mr-2"></i>Scrie-i Robotului</a>
+	    <li class="nav-item {% if request.resolver_match.url_name == 'robot' %}active{% endif %}">
+		<a class="nav-link" href="{% url 'robot' %}"><i class="fas fa-robot fa-fw mr-2"></i>Scrie-i Robotului</a>
 	    </li>
 	    <li class="nav-item {% if request.resolver_match.url_name == 'about' %}active{% endif %}">
 		<a class="nav-link" href="{% url 'about' %}"><i class="fas fa-user fa-fw mr-2"></i>Despre mine</a>
