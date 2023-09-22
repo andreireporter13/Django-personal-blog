@@ -3,9 +3,8 @@
 #
 #
 #
-from django.http import HttpResponse
+from django.views.generic import TemplateView
 
 
-def hi_world_view(request):
-    html_response = "<h1>Hi world</h1>"
-    return HttpResponse(html_response)
+class RobotPageView(TemplateView):
+    template_name = 'human_blog/ask_robot.html'

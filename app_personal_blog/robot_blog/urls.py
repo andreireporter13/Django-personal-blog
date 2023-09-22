@@ -8,5 +8,5 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.hi_world_view, name="robot-home"),
+    path('scrie-i-botului/', views.RobotPageView.as_view(), name="robot"),
 ]
