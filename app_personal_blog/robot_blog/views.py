@@ -7,4 +7,4 @@ from django.views.generic import TemplateView
 
 
 class RobotPageView(TemplateView):
-    template_name = 'human_blog/ask_robot.html'
+    template_name = 'robot_blog/ask_robot.html'
