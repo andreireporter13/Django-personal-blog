@@ -6,33 +6,28 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-
-<br>
-<h1</h1>
-<br>
-	<div class="row">
-              <div class="col-md-12">
-                    <h3>Formular de Contact</h3>
-                    <p>Vă rugăm să completați formularul de mai jos pentru a ne trimite un mesaj.</p>
-                    <form role="form">
-                        <div class="form-group">
-                                <label for="nume">Nume:</label>
-                                <input type="text" class="form-control" id="nume" required>
-                        </div>
-                        <div class="form-group">
-                                <label for="email">Adresă de E-mail:</label>
-                                <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="form-group">
-                                <label for="mesaj">Mesaj:</label>
-                                <textarea class="form-control" id="mesaj" rows="5" required></textarea>
-                        </div> 
-                        <button type="submit" class="btn btn-primary">Trimiteți Mesajul</button>
-                  </form>
-            </div>
-      </div>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="post" class="form-class">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.nume.label_tag }}
+                    {{ form.nume }}
+                </div>
+                <div class="form-group">
+                    {{ form.email.label_tag }}
+                    {{ form.email }}
+                </div>
+                <div class="form-group">
+                    {{ form.mesaj.label_tag }}
+                    {{ form.mesaj }}
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Trimite</button>
+            </form>
+        </div>
+    </div>
 </div>
 <br>
-<br>
 {% endblock %}
+
