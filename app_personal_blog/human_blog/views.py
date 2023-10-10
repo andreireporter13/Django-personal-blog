@@ -5,6 +5,8 @@
 #
 from django.views.generic import TemplateView
 #
+from django.shortcuts import redirect
+#
 from .forms import MesajForm
 
 
@@ -32,8 +34,13 @@ class ContactPageView(TemplateView):
         form = MesajForm(request.POST)
         if form.is_valid():
             form.save()
-            # Poți adăuga aici logica pentru a afișa un mesaj de succes sau pentru a redirecționa utilizatorul către o altă pagină
+            return redirect('succes')
         return self.render_to_response(self.get_context_data(form=form))
+
+
+# View for succes
+class SuccesPageContact(TemplateView):
+    template_name = 'human_blog/succes_contact.html'
 
 
 class InterviuriPageView(TemplateView):

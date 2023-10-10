@@ -6,28 +6,42 @@
 {% endblock %}
 
 {% block content %}
-<div class="container mt-5">
+<br>
+<div class="container">
+<img class="img-fluid" src={% static 'human_blog/assets/images/cowboy-lover.jpg' %} alt="image"></figure>
+<br>
+<br>
+<h1 class="row justify-content-center">Contact</h1>
+</div>
+<br>
     <div class="row justify-content-center">
         <div class="col-md-6">
             <form method="post" class="form-class">
+
                 {% csrf_token %}
+
                 <div class="form-group">
-                    {{ form.nume.label_tag }}
-                    {{ form.nume }}
+                    <label for="nume">Nume si Prenume</label>
+                    <input type="text" class="form-control form-control-lg" id="nume" name="nume" placeholder="Numele dvs.">
                 </div>
+
                 <div class="form-group">
-                    {{ form.email.label_tag }}
-                    {{ form.email }}
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Adresa de email">
                 </div>
+
                 <div class="form-group">
-                    {{ form.mesaj.label_tag }}
-                    {{ form.mesaj }}
+                    <label for="mesaj">Mesajul tau</label>
+                    <textarea class="form-control form-control-lg" id="mesaj" name="mesaj" rows="4" placeholder="Spatiu pentru mesajul tau"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Trimite</button>
+
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Trimite</button>
+
             </form>
         </div>
     </div>
-</div>
-<br>
+
+    <br>
+
 {% endblock %}
 
