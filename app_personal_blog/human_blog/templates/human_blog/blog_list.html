@@ -9,14 +9,23 @@
 	    <section class="cta-section theme-bg-light py-5">
 		    <div class="container text-center">
 			    <h2 class="heading">DevBlog - Oameni vs Roboti</h2>
-			    <div class="intro">Aboneaza-te ca sa nu pierzi scorul dintre oameni si roboti. E important!</div>
-			    <form class="signup-form form-inline justify-content-center pt-3">
-                    <div class="form-group">
-                        <label class="sr-only" for="semail">Your email</label>
-                        <input type="email" id="semail" name="semail1" class="form-control mr-md-1 semail" placeholder="Doar un email...">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Ma abonez</button>
-                </form>
+			    <div class="intro">Aboneaza-te, ca sa nu pierzi scorul dintre oameni si roboti. E important!</div>
+				<div class="row justify-content-center">
+				<div class="col-md-6">
+				<form method="post" class="form-class">
+					    {% csrf_token %}
+					    <div class="form-group">
+						<div class="input-group">
+						    <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Adresa de email">
+						    <div class="input-group-append">
+							<button type="submit" class="btn btn-primary btn-lg">Abonează-te</button>
+						    </div>
+						</div>
+					    </div>
+
+					</form>
+				    </div>
+			</div>
 		    </div><!--//container-->
 	    </section>
 	    

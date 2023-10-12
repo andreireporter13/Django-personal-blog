@@ -16,4 +16,5 @@ urlpatterns = [
 
     # succes contact page
     path('mesaj-trimis-cu-succes/', views.SuccesPageContact.as_view(), name="succes"),
+    path('abonare-newsletter/', views.AbonarePageNewsletter.as_view(), name="newsletter"),
 ]
